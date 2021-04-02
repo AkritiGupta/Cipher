@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Invoice Generator</title>
+</head>
+<style>
+	.text-block{
+		font-family: Arial;
+		position: relative;
+		width: 450px;
+		left: 420px;
+		background-color: #325467;
+		color: white;
+		padding-left: 60px;
+		padding-top: 120px;
+		padding-bottom: 120px;
+		margin-top: -20px;
+		height: 100%;
+
+	}
+</style>
+<body>
+{% extends "base.html" %}
+ {% block content %}
+<form>
+	<div class="text-block">
+		<center><h2><label>Confirmation mail form</label></h2></center>
+		<br>
+		<br>College Name:
+		<select name="college" id="college">
+			<option value="SJBIT">SJBIT</option>
+            <option value="RNSIT">RNSIT</option>
+            <option value="AMBEDKAR">AMBEDKAR</option>
+    		<option value="JSS">JSS</option>
+  		</select>
+  		</br><br>
+  		<br>Domain:
+  		<select name="domain" id="domain">
+    <option value="PYTHON">PYTHON</option>
+    <option value="JAVA">JAVA</option>
+    <option value="OOPS">OOPS</option>
+    <option value="MACHINE LEARNING">MACHINE LEARNING</option>
+    <option value="ARTIFICIAL INTELLIGENCE">ARTIFICIAL INTELLIGENCE</option>
+    <option value="WEB DEVELOPMENT">WEB DEVELOPMENT</option>
+  </select>
+		</br><br>
+		<br>Start Date: <input type="date" placeholder="Enter start date" required></br><br>
+		<br>Mode of Payment:
+		<input type="radio" id="per_hour" name="mode_of_payment" value="per_hour">
+		<label for="per_hour">Per Hour</label>
+		<input type="radio" id="per_day" name="mode_of_payment" value="per_day">
+  		<label for="per_day">Per Day</label></br><br>
+  		<br>Trainer:
+  		<select name="trainer" id="trainer">
+    <option value="Akriti">Akriti</option>
+    <option value="Vasavi">Vasavi</option>
+    <option value="Preethi">Preethi</option>
+    <option value="Keerthi">Keerthi</option>
+    <option value="Chandler">Chandler</option>
+    <option value="Romeo">Romeo</option>
+  </select>
+  </br><br>
+  <br>Total no. of days:<input type="number" required></br><br>
+
+ <br>Mode of Training:
+ <input type="radio" id="Online" name="mode_of_training" value="Online">
+  <label for="Online">Online</label> &nbsp &nbsp &nbsp
+  <input type="radio" id="Offline" name="mode_of_training" value="Offline">
+  <label for="Offline">Offline</label></br><br>
+  <br>
+  <center><button type="submit">Submit</button></center><br>
+</div>
+</div>
+</form>
+</body>
+</html>
+ {% endblock %}
+
+</body>
+</html>
