@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+<h1>hello {{name}} </h1>
+<form action="display">
+
+  <label for="college">College name:</label><br>
+  <select name="college" id="college">
+    <option value="SJBIT">SJBIT</option>
+    <option value="RNSIT">RNSIT</option>
+    <option value="AMBEDKAR">AMBEDKAR</option>
+    <option value="JSS">JSS</option>
+  </select>
+  <br><br>
+
+  <label for="domain">Domain :</label><br>
+  <select name="domain" id="domain">
+    <option value="PYTHON">PYTHON</option>
+    <option value="JAVA">JAVA</option>
+    <option value="OOPS">OOPS</option>
+    <option value="MACHINE LEARNING">MACHINE LEARNING</option>
+    <option value="ARTIFICIAL INTELLIGENCE">ARTIFICIAL INTELLIGENCE</option>
+    <option value="WEB DEVELOPMENT">WEB DEVELOPMENT</option>
+  </select>
+  <br><br>
+
+  <label for="start">Date :</label><br>
+  <input type="date" id="start" name="date" value="2021-12-31" min="2021-04-01"  max="2021-12-31">
+ <br><br>
+
+  <label for="amt">mode of pay :</label><br>
+  <select name="amt" id="amt">
+    <option value="hr">per hour</option>
+    <option value="day">per day</option>
+  </select>
+    <br><br>
+
+<label for="trainer">Trainer :</label><br>
+  <select name="trainer" id="trainer">
+    <option value="Akriti">Akriti</option>
+    <option value="Vasavi">Vasavi</option>
+    <option value="Preethi">Preethi</option>
+    <option value="Keerthi">Keerthi</option>
+    <option value="Chandler">Chandler</option>
+    <option value="Romeo">Romeo</option>
+  </select>
+  <br><br>
+
+  	<label for="No_of_days">Total no. of hours/days:</label><br>
+    <input type="text" id="No_of_days" name="No_of_days" >
+
+    <br><br>
+
+  <label for="training">Mode of Training :</label><br>
+  <select name="training" id="training">
+    <option value="on">online</option>
+    <option value="off">offline</option>
+  </select>
+
+<br><br>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+{{res}}
+{% endblock %}
+</body>
+</html>
